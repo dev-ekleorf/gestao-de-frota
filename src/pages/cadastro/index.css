@@ -1,0 +1,130 @@
+/*--------------- CSS TELA DE LOGIN ------------------- */
+
+.App {
+  text-align: center;
+
+}
+
+
+
+
+.App-body {
+  background-color: #005386;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+
+}
+
+.textGestao {
+  font-size: calc(10px + 2vmin);
+
+}
+
+.Name-login {
+  background-Color:'white';
+  width: 300px;
+  height: 15px;
+
+}
+
+.Senha-login {
+  background-Color:'white';
+  width: 300px;
+  height: 15px;
+  margin-top:1px;
+
+}
+
+.Button-login {
+  background-color: #05124e;
+  border: 1px;
+  color: white;
+  width: 308px;
+  height: 25px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+}
+
+.Button-cadastre {
+  background-color: #05124e;
+  border: 1px;
+  color: white;
+  width: 308px;
+  height: 25px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/*--------------- CSS CADASTRO ----------------*/
+
+.form-departamento {
+  background-Color:'white';
+  width: 308px;
+  height: 20px;
+  margin-top:10px;
+  text-align: center;
+}
+
+.formButtonCadastro {
+  background-color: #05124e;
+  border: 1px;
+  color: white;
+  width: 308px;
+  height: 25px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: -10px;
+  margin-left:-10px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  
+}
+
+.formSenha1 {
+  background-Color:'white';
+  width: 300px;
+  height: 15px;
+  margin-top:1px;
+
+}
+.formSenha2 {
+  background-Color:'white';
+  width: 300px;
+  height: 15px;
+  margin-top:-25px;
+  position: absolute;
+  margin-left:-155px;
+
+}
+
+.icon1 {
+  margin-left: 125px;
+  margin-top:-23px;
+  position: absolute;
+}
+
+.icon2 {
+  margin-left: 125px;
+  margin-top:-53px;
+  position: absolute;
+}
+
+.termosDeUso{
+  color:antiquewhite;
+  width: 300px;
+  height: 15px;
+  margin-top:-50px;
+  position:absolute;
+  margin-left:-40px;
+  font-size:calc(10px + 2vmin);
+}
