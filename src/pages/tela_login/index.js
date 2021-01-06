@@ -10,12 +10,16 @@ export const tela_login = withRouter(({history}) => {
   const handlerLoginEmail = useCallback(
     async (event) => {
       event.preventDefault();
-    
-      const {email,senha} = event.target.elements;
+      //console.log(event.target.email);
+      //const { email, senha } = event.target.elements;
+      //console.log(email);
+      var email = document.getElementById('email').value;
+      var senha = document.getElementById('senha').value;
+      console.log(email,senha);
       try{
         await authConfig
               .auth()
-              .signInWithEmailAndPassword(email.value,senha.value);
+              .signInWithEmailAndPassword(email,senha);
         history.push('/principal'); 
       }catch(error){
         console.log(error);
@@ -45,9 +49,9 @@ export const tela_login = withRouter(({history}) => {
         </p>
 
          <form onSubmit={handlerLoginEmail}>
-            <input className="Name-login"type="text" name="email" placeholder="Usuário" /> <br />
+            <input className="Name-login"type="email" id="email" name="email" placeholder="Usuário" /> <br />
         
-            <input className="Senha-login" type="password" name="senha" placeholder="Senha" /> <br />
+            <input className="Senha-login" type="password" id="senha" name="senha" placeholder="Senha" /> <br />
          
             <button type="submit" className="Button-login" value="Entrar" onClick={handlerLoginEmail}>Entrar</button>
          </form>

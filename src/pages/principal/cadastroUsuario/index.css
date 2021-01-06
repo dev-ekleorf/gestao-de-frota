@@ -1,0 +1,88 @@
+
+
+.App {
+  text-align: center;
+
+}
+
+
+
+
+.App-body {
+  background-color: #005386;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+
+}
+
+.textGestao {
+  font-size: calc(10px + 2vmin);
+
+}
+
+
+.form-departamento {
+  background-Color:'white';
+  width: 308px;
+  height: 20px;
+  margin-top:10px;
+  text-align: center;
+}
+
+.form-usuario {
+  background-Color:'white';
+  width: 308px;
+  height: 20px;
+  margin-top:10px;
+  text-align: center;
+}
+
+
+
+.formSenha1 {
+  background-Color:'white';
+  width: 300px;
+  height: 15px;
+  margin-top:1px;
+
+}
+.formSenha2 {
+  background-Color:'white';
+  width: 300px;
+  height: 15px;
+  margin-top:-25px;
+  margin-left:-155px;
+
+}
+
+.icon1 {
+  margin-left: 125px;
+  margin-top:-23px;
+  position: absolute;
+}
+
+.icon2 {
+  margin-left: 125px;
+  margin-top:-59px;
+  position: absolute;
+}
+
+.formButtonCadastro {
+  background-color: #05124e;
+  border: 1px;
+  color: white;
+  width: 308px;
+  height: 25px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 1;
+  margin-left:-155px;
+  position:absolute;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  
+}
