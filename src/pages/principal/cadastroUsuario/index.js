@@ -53,7 +53,7 @@ function Cadastro() {
               <option value="Departamento 4">Departamento 4</option>
             </select><br />
             <select className="form-usuario" name="usuario">
-              <option value="Selecione Departamento"> ------------------- Selecione o Usuário -------------------</option>
+              <option value="Selecione Departamento"> -------------- Selecione o tipo do Usuário -----------------</option>
               <option value="user1">Usuário Padrão</option>
               <option value="user2">Chefe de Departamento</option>
               <option value="user3">Chefe de Núcleo ADM</option>
@@ -64,7 +64,7 @@ function Cadastro() {
             <input className="formSenha2" type={type} name="password" minlength="8" placeholder="Confirme sua senha"/> <br />
             <img src={icon} className="icon2" onClick={handleVisibility} alt="confirme"/> <br />
          </form><br />           
-         <ButtonLink as="Link" className="ButtonLink" href="/principal"><input className="Button-menu" type="submit" value="Cadastrar Usuário"/></ButtonLink>
+         <ButtonLink as="Link" className="ButtonLink" href="/principal">Cadastrar Usuário</ButtonLink>
 
       </body>
 

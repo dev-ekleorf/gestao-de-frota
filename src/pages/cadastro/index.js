@@ -59,7 +59,7 @@ function Cadastro() {
             
             <div className="termosDeUso">
               <input type="checkbox" id="termos" name="termos"></input>
-                <label for="termos">Aceito os temos de uso</label>
+                <label for="termos" className="labelTermos">Aceito os termos de uso</label>
             </div>
              
             <input className="formButtonCadastro" type="submit" value="Cadastrar" />

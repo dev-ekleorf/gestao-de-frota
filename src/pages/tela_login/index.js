@@ -55,7 +55,7 @@ export const tela_login = withRouter(({history}) => {
          
             <button type="submit" className="Button-login" value="Entrar" onClick={handlerLoginEmail}>Entrar</button>
          </form>
-             <ButtonLink as="Link" className="ButtonLink" href="/cadastro">Cadastre-se</ButtonLink>
+          <ButtonLink as="Link" className="ButtonLink" href="/cadastro">Cadastre-se</ButtonLink>
 
       </body>
 
