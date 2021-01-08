@@ -46,7 +46,7 @@ export const principal = withRouter(({history}) => {
             <ButtonLink as="Link" className="ButtonLink" href="/cadastroVeiculo"><input className="Button-menu" type="submit" value="Cadastrar Veículo"/></ButtonLink>
             <ButtonLink as="Link" className="ButtonLink" href="/cadastroUsuario"><input className="Button-menu" type="submit" value="Cadastrar Usuário"/></ButtonLink>
             <ButtonLink as="Link" className="ButtonLink" href="/cadastroDepartamento"><input className="Button-menu" type="submit" value="Cadastrar Departamento"/></ButtonLink><br />
-            <button type="submit" className="Button-login" value="Entrar" onClick={handlerSair}>Sair</button>
+            <button type="submit" className="ButtonLink" value="Entrar" onClick={handlerSair}>Sair</button>
          
          
          

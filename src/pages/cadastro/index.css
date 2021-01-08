@@ -84,7 +84,7 @@
   text-align: center;
   font-size: 16px;
   cursor: pointer;
-  margin-top: -10px;
+  margin-top: -5px;
   margin-left:-10px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   
@@ -125,6 +125,11 @@
   height: 15px;
   margin-top:-50px;
   position:absolute;
-  margin-left:-40px;
+  margin-left:-48px;
   font-size:calc(10px + 2vmin);
+}
+
+.labelTermos{
+font-size: calc(1px + 2vmin);
+
 }
