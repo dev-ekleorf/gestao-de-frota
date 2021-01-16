@@ -27,15 +27,10 @@ export const principal = withRouter(({history}) => {
   document.title = 'Gestão de Frota - principal'
   document.logo=''
   return(
-
-    <nav className="principal">
       
       <body className="App-body">
       
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Gestão de Frota - UFSM
-        </p>
 
          
             <ButtonLink as="Link" className="ButtonLink" href="/solicitaViagem"><input className="Button-menu" type="submit" value="Solicitar Viagem"/></ButtonLink>
@@ -46,12 +41,15 @@ export const principal = withRouter(({history}) => {
             <ButtonLink as="Link" className="ButtonLink" href="/cadastroVeiculo"><input className="Button-menu" type="submit" value="Cadastrar Veículo"/></ButtonLink>
             <ButtonLink as="Link" className="ButtonLink" href="/cadastroUsuario"><input className="Button-menu" type="submit" value="Cadastrar Usuário"/></ButtonLink>
             <ButtonLink as="Link" className="ButtonLink" href="/cadastroDepartamento"><input className="Button-menu" type="submit" value="Cadastrar Departamento"/></ButtonLink><br />
-            <button type="submit" className="ButtonLink" value="Entrar" onClick={handlerSair}>Sair</button>
-         
+            
+
+            <div className="Sair">
+          <ButtonLink as="Link" className="ButtonLinkSAIR" href="/principal"><input className="Button-menu" type="submit" onClick={handlerSair} value="Sair"/></ButtonLink>
+          </div>
+
          
          
       </body>
-    </nav>
 
   );
 });

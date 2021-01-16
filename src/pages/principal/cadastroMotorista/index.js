@@ -7,22 +7,31 @@ import ButtonLink from '../../../componentes/Button';
 function menu(){
 
     return (
-      <nav className="menu">
         
         <body className="App-body">
         
           <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Gestão de Frota - UFSM
-          </p>
-  
+           
            <form>
-              <input className="Name-form" type="text" placeholder="Nome do Motorista"/><br />
-              <input className="Name-form" type="text" placeholder="Matrícula"/><br />
-              <input className="Name-form" type="text" placeholder="RG"/><br />
-              <input className="Name-form" type="text" placeholder="CPF"/><br />
-              <input className="Name-form" type="text" placeholder="Celular"/><br />
-              <input className="Name-form" type="text" placeholder="Email"/><br />
+              <label className="txt"> Nome do Motorista: </label>
+                <input className="Name-form" type="text" placeholder="Nome Completo"/>
+
+              <label className="txt"> Matrícula: </label>
+                <input className="Name-form" type="text" placeholder=""/>
+
+              <label className="txt"> RG: </label>
+               <input className="Name-form" type="text" placeholder="Somente números"/>
+
+              <label className="txt"> CPF: </label>
+                <input className="Name-form" type="text" placeholder="Somente números"/>
+
+              <label className="txt"> Celular: </label>
+                <input className="Name-form" type="text" placeholder="Somente números"/>
+
+              <label className="txt"> Email: </label>
+                <input className="Name-form" type="text" placeholder="nome@email.com.br"/>
+
+              <label className="txt"> Escolha o Departamento: </label>
               <select id="departamento" name="Cdepartamento">
                 <option value="Selecione">---------------------- Departamento ----------------------</option>
                 <option value="Departamento 1">Departamento 1</option>   
@@ -31,18 +40,26 @@ function menu(){
                 <option value="Departamento 4">Departamento 4</option> 
                 <option value="Departamento 5">Departamento 5</option>
               </select><br />
-              <input className="Name-form" type="text" placeholder="Número da CNH"/><br />
-              <input className="Name-form" type="text" placeholder="Vencimento da CNH"/><br />
+
+              <label className="txt"> Número da CNH: </label>
+                <input className="Name-form" type="text" placeholder="Somente números"/>
+
+              <label className="txt"> Vencimento da CNH: </label>
+                 <input className="Name-form" type="date" placeholder="Vencimento da CNH"/>
+
+              <label className="txt"> Categoria da CNH: </label>
               <select id="CategoriaCNH" name="CategoriaCNH">
-                <option value="Selecione">-------------------- Categoria da CNH -------------------</option>
+                <option value="Selecione">------------------------- Categoria  -------------------------</option>
                 <option value="A">A</option>   
                 <option value="B">B</option> 
                 <option value="C">C</option> 
                 <option value="D">D</option> 
                 <option value="E">E</option> 
              </select><br />
+
+             <label className="txt"> Categoria de Motorista </label>
              <select id="CategoriaMotorista" name="CategoriaMotorista">
-                <option value="Selecione">------------------ Categoria de Motorista ---------------</option>
+                <option value="Selecione">-------------------------- Selecione ------------------------</option>
                 <option value="M1">01 - Motorista de Veículos Coletivos</option>   
                 <option value="M2">02 - Motoristas de Veículos Leves e Camionetas</option> 
                 <option value="M3">03 - Motorista de Veículos de Carga</option> 
@@ -50,11 +67,31 @@ function menu(){
                 <option value="M5">05 - Motorista de Ambulância</option>
              </select>
            </form>
+           
            <ButtonLink as="Link" className="ButtonLink" href="/principal"><input className="Button-menu" type="submit" value="Cadastrar Motorista"/></ButtonLink>
 
+           <div>
+           <label className="txt">Buscar Motorista: </label>
+              <input className="Name-form" type="text" placeholder="Pesquisar"/>
+          </div>
+
+          <table > 
+            <tr>
+          <th><div className="Save">
+          <ButtonLink as="Link" className="ButtonLinkSALVAR" href="/principal"><input className="Button-menu" type="submit" value="Salvar"/></ButtonLink>
+          </div></th>
+          <th>
+          <div  className="Edit">
+          <ButtonLink as="Link" className="ButtonLinkEDITAR" href="/principal"><input className="Button-menu" type="submit" value="Editar"/></ButtonLink>
+          </div>
+          </th>
+           </tr>
+          </table>
+          <div className="Sair">
+          <ButtonLink as="Link" className="ButtonLinkSAIR" href="/principal"><input className="Button-menu" type="submit" value="Voltar"/></ButtonLink>
+          </div>
+
         </body>
-  
-      </nav>
   
     );
   }

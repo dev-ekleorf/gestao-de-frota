@@ -1,13 +1,4 @@
 
-
-.App {
-  text-align: center;
-
-}
-
-
-
-
 .App-body {
   background-color: #005386;
   min-height: 100vh;
@@ -18,12 +9,6 @@
   color: white;
 
 }
-
-.textGestao {
-  font-size: calc(10px + 2vmin);
-
-}
-
 
 .form-departamento {
   background-Color:'white';
@@ -41,8 +26,6 @@
   text-align: center;
 }
 
-
-
 .formSenha1 {
   background-Color:'white';
   width: 300px;
@@ -59,18 +42,6 @@
 
 }
 
-.icon1 {
-  margin-left: 125px;
-  margin-top:-23px;
-  position: absolute;
-}
-
-.icon2 {
-  margin-left: 125px;
-  margin-top:-59px;
-  position: absolute;
-}
-
 .formButtonCadastro {
   background-color: #05124e;
   border: 1px;
@@ -85,4 +56,33 @@
   position:relative;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   
+}
+
+.txt {
+  font-size: 17px;
+  text-align: left;
+  display:block;
+  margin-top: 5px;
+  
+}
+
+.Name-form {
+  background-Color:'white';
+  width: 300px;
+  height: 15px;
+  padding-top: 5px;
+
+}
+
+.Save {
+  
+  padding-left: 1px;
+}
+.Edit {
+  
+  padding-left: 32px;
+}
+.Sair {
+  
+  padding-left: 240px;
 }

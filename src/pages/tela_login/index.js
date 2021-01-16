@@ -48,13 +48,15 @@ export const tela_login = withRouter(({history}) => {
           Gestão de Frota - UFSM
         </p>
 
+        
          <form onSubmit={handlerLoginEmail}>
             <input className="Name-login"type="email" id="email" name="email" placeholder="Usuário" /> <br />
-        
+          
             <input className="Senha-login" type="password" id="senha" name="senha" placeholder="Senha" /> <br />
          
             <button type="submit" className="Button-login" value="Entrar" onClick={handlerLoginEmail}>Entrar</button>
          </form>
+         
           <ButtonLink as="Link" className="ButtonLink" href="/cadastro">Cadastre-se</ButtonLink>
 
       </body>
