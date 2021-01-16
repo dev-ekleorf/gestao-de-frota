@@ -7,29 +7,57 @@ import ButtonLink from '../../../componentes/Button';
 function menu(){
 
     return (
-      <nav className="menu">
         
         <body className="App-body">
         
           <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Gestão de Frota - UFSM
-          </p>
   
-           <form>
-              <input className="Name-form" type="text" placeholder="Valor de Hora Trabalhada"/><br />
-              <input className="Name-form" type="text" placeholder="Valor de Café"/><br />
-              <input className="Name-form" type="text" placeholder="Valor de Almoço"/><br />
-              <input className="Name-form" type="text" placeholder="Valor de Lanche"/><br />
-              <input className="Name-form" type="text" placeholder="Valor de Janta"/><br />
-              <input className="Name-form" type="text" placeholder="Valor de Pernoite"/><br />
-           </form>
-           
-           <ButtonLink as="Link" className="ButtonLink" href="/principal"><input className="Button-menu" type="submit" value="Cadastrar Parâmetro de Pagamento"/></ButtonLink>
+          <form>
+          <label className="txt"> Categoria de Motorista </label>
+             <select id="CategoriaMotorista" name="CategoriaMotorista">
+                <option value="Selecione">-------------------------- Selecione ------------------------</option>
+                <option value="M1">01 - Motorista de Veículos Coletivos</option>   
+                <option value="M2">02 - Motoristas de Veículos Leves e Camionetas</option> 
+                <option value="M3">03 - Motorista de Veículos de Carga</option> 
+                <option value="M4">04 - Motorista de Coleta/Entrega</option> 
+                <option value="M5">05 - Motorista de Ambulância</option>
+             </select>
+           <label className="txt">Valor da hora trabalhada: </label>
+              <input className="Name-form" type="text" placeholder=""/>
+           <label className="txt">Valor da hora extra: </label>
+              <input className="Name-form" type="text" placeholder=""/>
+           <label className="txt">Valor do Café: </label>
+              <input className="Name-form" type="text" placeholder=""/>
+           <label className="txt">Valor de Almoco: </label>
+              <input className="Name-form" type="text" placeholder=""/>
+           <label className="txt">Valor de Lanche: </label>
+              <input className="Name-form" type="text" placeholder=""/>
+           <label className="txt">Valor de Janta: </label>
+              <input className="Name-form" type="text" placeholder=""/>
+           <label className="txt">Valor de Pernoite: </label>
+              <input className="Name-form" type="text" placeholder=""/>
+          </form>
+
+          <ButtonLink as="Link" className="ButtonLink" href="/principal"><input className="Button-menu" type="submit" value="Cadastrar Parâmetro"/></ButtonLink>
+
+          <table > 
+            <tr>
+          <th><div className="Save">
+          <ButtonLink as="Link" className="ButtonLinkSALVAR" href="/principal"><input className="Button-menu" type="submit" value="Salvar"/></ButtonLink>
+          </div></th>
+          <th>
+          <div  className="Edit">
+          <ButtonLink as="Link" className="ButtonLinkEDITAR" href="/principal"><input className="Button-menu" type="submit" value="Editar"/></ButtonLink>
+          </div>
+          </th>
+           </tr>
+          </table>
+          <div className="Sair">
+          <ButtonLink as="Link" className="ButtonLinkSAIR" href="/principal"><input className="Button-menu" type="submit" value="<"/></ButtonLink>
+          </div>
+
 
         </body>
-  
-      </nav>
   
     );
   }

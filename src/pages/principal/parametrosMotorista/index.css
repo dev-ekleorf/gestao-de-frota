@@ -1,7 +1,3 @@
-.menu {
-    text-align: center;
-  
-  }
   
   .App-logo {
     height: 30vmin;
@@ -9,7 +5,6 @@
     margin-top: 40px;
     
   }
-  
   
   .App-body {
     background-color: #005386;
@@ -26,18 +21,26 @@
     background-Color:'white';
     width: 300px;
     height: 15px;
-  
+    padding-top: 5px;
+  }
+
+  .txt {
+    font-size: 17px;
+    text-align: left;
+    display:block;
+    margin-top: 5px; 
   }
   
-  .Button-menu {
-    background-color: #05124e;
-    border: 1px;
-    color: white;
-    width: 308px;
-    height: 25px;
-    text-align: center;
-    font-size: 16px;
-    cursor: pointer;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  .Save {
   
+    padding-left: 1px;
   }
+  .Edit {
+    
+    padding-left: 32px;
+  }
+  .Sair {
+    
+    padding-left: 240px;
+  }
+  

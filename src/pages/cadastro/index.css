@@ -1,12 +1,3 @@
-/*--------------- CSS TELA DE LOGIN ------------------- */
-
-.App {
-  text-align: center;
-
-}
-
-
-
 
 .App-body {
   background-color: #005386;
@@ -16,56 +7,8 @@
   align-items: center;
   font-size: calc(10px + 2vmin);
   color: white;
-
-}
-
-.textGestao {
-  font-size: calc(10px + 2vmin);
-
-}
-
-.Name-login {
-  background-Color:'white';
-  width: 300px;
-  height: 15px;
-
-}
-
-.Senha-login {
-  background-Color:'white';
-  width: 300px;
-  height: 15px;
-  margin-top:1px;
-
-}
-
-.Button-login {
-  background-color: #05124e;
-  border: 1px;
-  color: white;
-  width: 308px;
-  height: 25px;
   text-align: center;
-  font-size: 16px;
-  cursor: pointer;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-
 }
-
-.Button-cadastre {
-  background-color: #05124e;
-  border: 1px;
-  color: white;
-  width: 308px;
-  height: 25px;
-  text-align: center;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 15px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
-
-/*--------------- CSS CADASTRO ----------------*/
 
 .form-departamento {
   background-Color:'white';
@@ -84,8 +27,6 @@
   text-align: center;
   font-size: 16px;
   cursor: pointer;
-  margin-top: -5px;
-  margin-left:-10px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   
 }
@@ -95,41 +36,63 @@
   width: 300px;
   height: 15px;
   margin-top:1px;
-
+  padding-top: 5px;
 }
 .formSenha2 {
   background-Color:'white';
   width: 300px;
   height: 15px;
-  margin-top:-25px;
-  position: absolute;
-  margin-left:-155px;
-
+  margin-top: -100px;
+  align-items: center;
+  padding-top: 5px;
+  margin-right: -150px;
 }
 
-.icon1 {
-  margin-left: 125px;
-  margin-top:-23px;
-  position: absolute;
-}
+.Name-form {
+  background-Color:'white';
+  width: 300px;
+  height: 15px;
+  padding-top: 5px;
 
-.icon2 {
-  margin-left: 125px;
-  margin-top:-53px;
-  position: absolute;
 }
 
 .termosDeUso{
   color:antiquewhite;
   width: 300px;
   height: 15px;
-  margin-top:-50px;
-  position:absolute;
-  margin-left:-48px;
   font-size:calc(10px + 2vmin);
+  text-align: left;
 }
 
 .labelTermos{
 font-size: calc(1px + 2vmin);
 
+}
+
+.txt {
+  font-size: 17px;
+  text-align: left;
+  display:block;
+  margin-top: 5px; 
+}
+
+.divSenha {
+  color:antiquewhite;
+  width: 300px;
+  height: 15px;
+  align-items: center;
+  margin-bottom: -10px;
+}
+
+.Save {
+  
+  padding-left: 1px;
+}
+.Edit {
+  
+  padding-left: 32px;
+}
+.Sair {
+  
+  padding-left: 240px;
 }

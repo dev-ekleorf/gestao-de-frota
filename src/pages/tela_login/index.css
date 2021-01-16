@@ -64,3 +64,10 @@
   margin-top: 15px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
+
+.txt {
+  font-size: calc(5px + 1vmin);
+  color: white;
+  text-align:left;
+  padding-top: 1px;
+}
