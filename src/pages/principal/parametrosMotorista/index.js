@@ -13,6 +13,8 @@ function menu(){
           <img src={logo} className="App-logo" alt="logo" />
   
           <form>
+          <label className="txt">Nova categoria: </label>
+              <input className="Name-form" type="text" placeholder="Adicionar nova ou consultar abaixo"/>
           <label className="txt"> Categoria de Motorista </label>
              <select id="CategoriaMotorista" name="CategoriaMotorista">
                 <option value="Selecione">-------------------------- Selecione ------------------------</option>
@@ -22,9 +24,21 @@ function menu(){
                 <option value="M4">04 - Motorista de Coleta/Entrega</option> 
                 <option value="M5">05 - Motorista de Ambulância</option>
              </select>
+
+             <table > 
+            <tr>
+          <th><div className="Save">
+          <ButtonLink as="Link" className="ButtonLinkSALVAR" href="/principal"><input className="Button-menu" type="submit" value="Salvar"/></ButtonLink>
+          </div></th>
+          <th>
+          <div  className="Edit">
+          <ButtonLink as="Link" className="ButtonLinkEDITAR" href="/principal"><input className="Button-menu" type="submit" value="Editar"/></ButtonLink>
+          </div>
+          </th>
+           </tr>
+          </table><br />
+
            <label className="txt">Valor da hora trabalhada: </label>
-              <input className="Name-form" type="text" placeholder=""/>
-           <label className="txt">Valor da hora extra: </label>
               <input className="Name-form" type="text" placeholder=""/>
            <label className="txt">Valor do Café: </label>
               <input className="Name-form" type="text" placeholder=""/>
@@ -38,22 +52,10 @@ function menu(){
               <input className="Name-form" type="text" placeholder=""/>
           </form>
 
-          <ButtonLink as="Link" className="ButtonLink" href="/principal"><input className="Button-menu" type="submit" value="Cadastrar Parâmetro"/></ButtonLink>
+          <ButtonLink as="Link" className="ButtonLink" href="/principal"><input className="Button-menu" type="submit" value="Cadastrar Categoria"/></ButtonLink>
 
-          <table > 
-            <tr>
-          <th><div className="Save">
-          <ButtonLink as="Link" className="ButtonLinkSALVAR" href="/principal"><input className="Button-menu" type="submit" value="Salvar"/></ButtonLink>
-          </div></th>
-          <th>
-          <div  className="Edit">
-          <ButtonLink as="Link" className="ButtonLinkEDITAR" href="/principal"><input className="Button-menu" type="submit" value="Editar"/></ButtonLink>
-          </div>
-          </th>
-           </tr>
-          </table>
           <div className="Sair">
-          <ButtonLink as="Link" className="ButtonLinkSAIR" href="/principal"><input className="Button-menu" type="submit" value="<"/></ButtonLink>
+          <ButtonLink as="Link" className="ButtonLinkSAIR" href="/principal"><input className="Button-menu" type="submit" value="Voltar"/></ButtonLink>
           </div>
 
 

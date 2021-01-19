@@ -12,9 +12,31 @@ function Cadastro() {
       <body className="App-body">
       
         <img src={logo} className="App-logo" alt="logo" />
+         <form>
+         <label className="txt"> Lista de Usuários: </label>
+             <select id="CategoriaMotorista" name="CategoriaMotorista">
+                <option value="Selecione">-------------------------- Selecione ------------------------</option>
+                <option value="M1">Usuário 01</option>   
+                <option value="M2">Usuário 02</option> 
+                <option value="M3">Usuário 03</option> 
+                <option value="M4">Usuário 04</option> 
+                <option value="M5">Usuário 05</option>
+             </select>
+         </form>
+        <table > 
+            <tr>
+          <th><div className="Save">
+          <ButtonLink as="Link" className="ButtonLinkSALVAR" href="/principal"><input className="Button-menu" type="submit" value="Salvar"/></ButtonLink>
+          </div></th>
+          <th>
+          <div  className="Edit">
+          <ButtonLink as="Link" className="ButtonLinkEDITAR" href="/principal"><input className="Button-menu" type="submit" value="Editar"/></ButtonLink>
+          </div>
+          </th>
+           </tr>
+          </table><br />
 
         <form>
-
          <label className="txt"> Nome do Usuário: </label>
             <input className="Name-form"type="text" name="name" placeholder="Nome Completo"/>
          <label className="txt">Celular: </label>
@@ -49,7 +71,7 @@ function Cadastro() {
          <ButtonLink as="Link" className="ButtonLink" href="/principal">Cadastrar Usuário</ButtonLink>
 
          <div className="Sair">
-          <ButtonLink as="Link" className="ButtonLinkSAIR" href="/principal"><input className="Button-menu" type="submit" value="<"/></ButtonLink>
+          <ButtonLink as="Link" className="ButtonLinkSAIR" href="/principal"><input className="Button-menu" type="submit" value="Voltar"/></ButtonLink>
           </div>
          
       </body>
