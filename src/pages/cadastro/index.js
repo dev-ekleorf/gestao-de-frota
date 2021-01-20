@@ -47,7 +47,7 @@ function Cadastro() {
         <ButtonLink as="Link" className="ButtonLink" href="/tela_login"><input className="Button-menu" type="submit" value="Cadastrar"/></ButtonLink>
 
         <div className="Sair">
-          <ButtonLink as="Link" className="ButtonLinkSAIR" href="/principal"><input className="Button-menu" type="submit" value="<"/></ButtonLink>
+          <ButtonLink as="Link" className="ButtonLinkSAIR" href="/principal"><input className="Button-menu" type="submit" value="Voltar"/></ButtonLink>
           </div> 
         
       </body>

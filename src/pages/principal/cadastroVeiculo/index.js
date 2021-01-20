@@ -11,7 +11,32 @@ function menu(){
         <body className="App-body">
         
           <img src={logo} className="App-logo" alt="logo" />
-  
+
+          <div>
+           <label className="txt">Veículos Cadastrados: </label>
+           <select id="tipo" name="tipo">
+                <option value="Selecione">------------------------- Selecione -------------------------</option>
+                <option value="1">Veículo 1</option>
+                <option value="2">Veículo 2</option>   
+                <option value="3">Veículo 3</option> 
+                <option value="4">Veículo 4</option> 
+                <option value="5">Veículo 5</option> 
+             </select>
+          </div>
+         
+          <table > 
+            <tr>
+          <th><div className="Save">
+          <ButtonLink as="Link" className="ButtonLinkSALVAR" href="/principal"><input className="Button-menu" type="submit" value="Salvar"/></ButtonLink>
+          </div></th>
+          <th>
+          <div  className="Edit">
+          <ButtonLink as="Link" className="ButtonLinkEDITAR" href="/principal"><input className="Button-menu" type="submit" value="Editar"/></ButtonLink>
+          </div>
+          </th>
+           </tr>
+          </table><br />
+
           <form>
            <label className="txt">Marca: </label>
               <input className="Name-form" type="text" placeholder="Exemplo: Fiat, Volkswagem, Renault etc"/>
@@ -36,25 +61,8 @@ function menu(){
    
            <ButtonLink as="Link" className="ButtonLink" href="/principal"><input className="Button-menu" type="submit" value="Cadastrar"/></ButtonLink>
            
-          <div>
-           <label className="txt">Buscar Placa: </label>
-              <input className="Name-form" type="text" placeholder="Pesquisar"/>
-          </div>
-         
-          <table > 
-            <tr>
-          <th><div className="Save">
-          <ButtonLink as="Link" className="ButtonLinkSALVAR" href="/principal"><input className="Button-menu" type="submit" value="Salvar"/></ButtonLink>
-          </div></th>
-          <th>
-          <div  className="Edit">
-          <ButtonLink as="Link" className="ButtonLinkEDITAR" href="/principal"><input className="Button-menu" type="submit" value="Editar"/></ButtonLink>
-          </div>
-          </th>
-           </tr>
-          </table>
           <div className="Sair">
-          <ButtonLink as="Link" className="ButtonLinkSAIR" href="/principal"><input className="Button-menu" type="submit" value="<"/></ButtonLink>
+          <ButtonLink as="Link" className="ButtonLinkSAIR" href="/principal"><input className="Button-menu" type="submit" value="Voltar"/></ButtonLink>
           </div>
           
         </body>

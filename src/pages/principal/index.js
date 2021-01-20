@@ -34,13 +34,11 @@ export const principal = withRouter(({history}) => {
 
          
             <ButtonLink as="Link" className="ButtonLink" href="/solicitaViagem"><input className="Button-menu" type="submit" value="Solicitar Viagem"/></ButtonLink>
-        
-        
-            <ButtonLink as="Link" className="ButtonLink" href="/cadastroMotorista"><input className="Button-menu" type="submit" value="Cadastrar Motorista"/></ButtonLink>
-            <ButtonLink as="Link" className="ButtonLink" href="/parametrosMotorista"><input className="Button-menu" type="submit" value="Parâmetros - Motorista"/></ButtonLink>
-            <ButtonLink as="Link" className="ButtonLink" href="/cadastroVeiculo"><input className="Button-menu" type="submit" value="Cadastrar Veículo"/></ButtonLink>
+            <ButtonLink as="Link" className="ButtonLink" href="/cadastroMotorista"><input className="Button-menu" type="submit" value="Motoristas"/></ButtonLink>
+            <ButtonLink as="Link" className="ButtonLink" href="/parametrosMotorista"><input className="Button-menu" type="submit" value="Categoria - Motoristas"/></ButtonLink>
+            <ButtonLink as="Link" className="ButtonLink" href="/cadastroVeiculo"><input className="Button-menu" type="submit" value="Veículos"/></ButtonLink>
             <ButtonLink as="Link" className="ButtonLink" href="/cadastroUsuario"><input className="Button-menu" type="submit" value="Cadastrar Usuário"/></ButtonLink>
-            <ButtonLink as="Link" className="ButtonLink" href="/cadastroDepartamento"><input className="Button-menu" type="submit" value="Cadastrar Departamento"/></ButtonLink><br />
+            <ButtonLink as="Link" className="ButtonLink" href="/cadastroDepartamento"><input className="Button-menu" type="submit" value="Departamentos"/></ButtonLink><br />
             
 
             <div className="Sair">

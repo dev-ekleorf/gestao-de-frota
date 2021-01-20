@@ -17,7 +17,7 @@ function solicitaViagem(){
           <ButtonLink as="Link" className="ButtonLink" href=""><input className="Button-menu" type="submit" value="Transporte de Carga"/></ButtonLink><br />
          
          <div className="Sair">
-          <ButtonLink as="Link" className="ButtonLinkSAIR" href="/principal"><input className="Button-menu" type="submit" value="<"/></ButtonLink>
+          <ButtonLink as="Link" className="ButtonLinkSAIR" href="/principal"><input className="Button-menu" type="submit" value="Voltar"/></ButtonLink>
           </div>
 
         </body>
