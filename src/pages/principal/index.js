@@ -31,9 +31,7 @@ export const principal = withRouter(({history}) => {
       <body className="App-body">
       
         <img src={logo} className="App-logo" alt="logo" />
-
-         
-            <ButtonLink as="Link" className="ButtonLink" href="/solicitaViagem"><input className="Button-menu" type="submit" value="Solicitar Viagem"/></ButtonLink>
+        
             <ButtonLink as="Link" className="ButtonLink" href="/cadastroMotorista"><input className="Button-menu" type="submit" value="Motoristas"/></ButtonLink>
             <ButtonLink as="Link" className="ButtonLink" href="/parametrosMotorista"><input className="Button-menu" type="submit" value="Categoria - Motoristas"/></ButtonLink>
             <ButtonLink as="Link" className="ButtonLink" href="/cadastroVeiculo"><input className="Button-menu" type="submit" value="Veículos"/></ButtonLink>
