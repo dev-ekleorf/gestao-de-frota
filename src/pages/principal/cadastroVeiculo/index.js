@@ -1,6 +1,6 @@
 import logo from './logo.png';
 import './index.css';
-import {Redirect} from 'react-router-dom';
+
 import ButtonLink from '../../../componentes/Button';
 
 
