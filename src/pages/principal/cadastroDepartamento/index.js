@@ -6,43 +6,64 @@ import ButtonLink from '../../../componentes/Button';
 import Select from 'react-select';
 
 
-const categoriasCadastradas = [];
+const departamentosCadastrados = [];
 
-    firebase.firestore().collection("categoriasmotorista")
+    firebase.firestore().collection("departamentos")
     .get()
     .then(function(querySnapshot) {
         querySnapshot.forEach(function(doc) {
-            categoriasCadastradas.push({value: doc.id, label: doc.data().catmotorista});
+            departamentosCadastrados.push({value: doc.id, label: doc.data().depnome});
         });
     })
     .catch(function(error) {
         console.log("Error getting documents: ", error);
     });
-    console.log('[categoriasCadastradas]',categoriasCadastradas);
+    console.log('[departamentosCadastrados]',departamentosCadastrados);
+
+
+    const campusCadastrados = [];
+
+    firebase.firestore().collection("campus")
+    .get()
+    .then(function(querySnapshot) {
+        querySnapshot.forEach(function(doc) {
+            campusCadastrados.push({value: doc.id, label: doc.data().nomecampus});
+        });
+    })
+    .catch(function(error) {
+        console.log("Error getting documents: ", error);
+    });
+    console.log('[campusCadastrados]',campusCadastrados);
+
 
 
 function limparCampos(){
-  document.getElementById('catmotorista').value = '';
-  document.getElementById('valorhora').value = '';
-  document.getElementById('valorlanche').value = '';
-  document.getElementById('valorpernoite').value = '';
-  document.getElementById('valorrefeicao').value = '';
+  document.getElementById('depnome').value = '';
+  selecionarTexto('departamentos',"Selecione");
 }
 
 const handleChange = selectedOption => {
   console.log(`Option selected:`, selectedOption);
-  const categoriaSelecionada = firebase.firestore().collection("categoriasmotorista").doc(selectedOption.value).onSnapshot(function(doc){
+  const departamentoSelecionado = firebase.firestore().collection("departamentos").doc(selectedOption.value).onSnapshot(function(doc){
 
-    document.getElementById('catmotorista').value = doc.data().catmotorista;
-    document.getElementById('valorhora').value = doc.data().valorhora;
-    document.getElementById('valorlanche').value = doc.data().valorlanche;
-    document.getElementById('valorpernoite').value = doc.data().valorpernoite;
-    document.getElementById('valorrefeicao').value = doc.data().valorrefeicao;
-    console.log(categoriaSelecionada);
+    document.getElementById('depnome').value = doc.data().depnome;
+    selecionarTexto('lotacao',doc.data().lotacao);
+    
+    console.log(departamentoSelecionado);
   });
   
 };
 
+function selecionarTexto(elementId, cod) {
+  var elt = document.getElementById(elementId);
+  var opt = elt.getElementsByTagName("option");
+  for(var i = 0; i < opt.length; i++) {
+    if(opt[i].value === cod) {
+      elt.value = cod;
+    }
+  }
+return null;
+}
 
 function Menu(){
   const [mostraCampos, setMostraCampos] = useState('txt');
@@ -55,43 +76,28 @@ function Menu(){
           
 
           <form>
-            <label className="txt"> Departamentos Cadastrados: </label>
-            <Select id="CategoriaMotorista" name="CategoriaMotorista" className={mostraCampos}  options={categoriasCadastradas} onChange={handleChange}></Select>
-             <select id="CategoriaCNH" name="CategoriaCNH">
-               <option value="Selecione">-------------------- Departamentos ---------------------</option>
-               <option value="c1">Departamento 1</option>   
-               <option value="c2">Departamento 2</option> 
-               <option value="c3">Departamento 3</option> 
-               <option value="c4">Departamento 4</option> 
-               <option value="c5">Departamento 5</option> 
-             </select>
-          
+            <label className={mostraCampos}> Departamentos Cadastrados: </label>
+            <Select id="departamentos" name="depnome" className={mostraCampos}  options={departamentosCadastrados} onChange={handleChange}></Select>
+            
            <label className="txt"> Nome do Departamento: </label>
-              <input className="Name-form" type="text" placeholder=""/>
+              <input className="Name-form" type="text" placeholder="" id="depnome"/>
            <label className="txt"> Selecione o Campus: </label>
-              <select id="CategoriaCNH" name="CategoriaCNH">
-                <option value="Selecione">-------------------------- Campus -------------------------</option>
-                <option value="c1">Campus 1</option>   
-                <option value="c2">Campus 2</option> 
-                <option value="c3">Campus 3</option> 
-                <option value="c4">Campus 4</option> 
-                <option value="c5">Campus 5</option> 
-             </select><br />
+             <Select id="lotacao" name="Lotação" className="txt"  options={campusCadastrados} ></Select>
           </form>
 
 
           <button
               type="submit" 
-              id="buttonNovoMotorista"
+              id="buttonNovoDepartamento"
               className="Button-login" 
-              value="Novo Motorista" 
+              value="Novo Departamento" 
               onClick={function handlerAdicionar(){
                 setMostraCampos('hidden');
-                document.getElementById('buttonNovoMotorista').style.display='none';
+                document.getElementById('buttonNovoDepartamento').style.display='none';
                 limparCampos();
                 console.log('[mostraCampos hidden] = ',{mostraCampos});
               }}>
-              Novo Motorista
+              Novo Departamento
             </button>
            
            <button
@@ -100,21 +106,22 @@ function Menu(){
               value="Salvar" 
               onClick={function handlerCadastrar(){
                 console.log('[mostraCampos] = ',{mostraCampos});
-                if({mostraCampos} == "hidden"){
+                if({mostraCampos} === "hidden"){
                   alert("Atualizar!");
                 }
                 else {
                   alert("Novo!");
                 }
           
-                firebase.firestore().collection("categoriamotorista").add({
-                  catmotorista: document.getElementById('catmotorista').value,
-                  valorhora: document.getElementById('valorhora').value,
-                  valorlanche: document.getElementById('valorlanche').value,
-                  valorpernoite: document.getElementById('valorpernoite').value,
-                  valorrefeicao: document.getElementById('valorrefeicao').value,
+                firebase.firestore().collection("departamentos").add({
+                  depnome: document.getElementById('depnome').value,
+                  
+                  lotacao: document.getElementById('lotacao').id,
+                  
                 }
                 )
+                alert("Departamento cadastrado com Sucesso!");
+                limparCampos();
               }
             
             }>
@@ -124,6 +131,7 @@ function Menu(){
           <div className="Sair">
           <ButtonLink as="Link" className="ButtonLinkSAIR" href="/principal"><input className="Button-menu" type="submit" value="Voltar"/></ButtonLink>
           </div>
+
           
 
         </body>
