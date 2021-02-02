@@ -19,8 +19,7 @@ const motoristasCadastrados = [];
     });
     console.log('[motoristas]',motoristasCadastrados);
 
-
-  const departamentosCadastrados = [];
+    const departamentosCadastrados = [];
 
     firebase.firestore().collection("departamentos")
     .get()
@@ -35,20 +34,8 @@ const motoristasCadastrados = [];
 
     console.log('[departamentos]',departamentosCadastrados);
 
-    const categoriasCadastradas = [];
 
-    firebase.firestore().collection("categoriasmotorista")
-    .get()
-    .then(function(querySnapshot) {
-        querySnapshot.forEach(function(doc) {
-            // doc.data() is never undefined for query doc snapshots
-            categoriasCadastradas.push({value: doc.id, label: doc.data().catmotorista});
-        });
-    })
-    .catch(function(error) {
-        console.log("Error getting documents: ", error);
-    });
-    console.log('[categoriasCadastradas]',categoriasCadastradas);
+    
 
     function selecionarTexto(elementId, cod) {
       var elt = document.getElementById(elementId);
@@ -61,24 +48,23 @@ const motoristasCadastrados = [];
     return null;
   }
 
-    const handleChange = selectedOption => {
-      console.log(`Option selected:`, selectedOption);
-      const motoristaSelecionado = firebase.firestore().collection("motoristas").doc(selectedOption.value).onSnapshot(function(doc){
-
-        document.getElementById('nomeMotorista').value = doc.data().nome;
-        selecionarTexto('CategoriaCNH',doc.data().categoriaCNH);
-        document.getElementById('catMotoristas').value = doc.data().categoriaMotorista;
-        document.getElementById('celular').value = doc.data().celular;
-        document.getElementById('cnh').value = doc.data().cnh;
-        document.getElementById('cpf').value = doc.data().cpf;
-        selecionarTexto('departamentos',doc.data().departamento);
-        document.getElementById('email').value = doc.data().email;
-        document.getElementById('matricula').value = doc.data().matricula;
-        document.getElementById('rg').value = doc.data().rg;
-        document.getElementById('vencimentoCNH').value = doc.data().vencimentoCNH;
-        console.log(motoristaSelecionado);
-      });
-      
+   const handleChange = selectedOption => {
+                    console.log(`Option selected:`, selectedOption);
+                    const motoristaSelecionado = firebase.firestore().collection("motoristas").doc(selectedOption.value).onSnapshot(function(doc){
+              
+                      document.getElementById('nomeMotorista').value = doc.data().nome;
+                      selecionarTexto('CategoriaCNH',doc.data().categoriaCNH);
+                      document.getElementById('catMotoristas').value = doc.data().categoriaMotorista;
+                      document.getElementById('celular').value = doc.data().celular;
+                      document.getElementById('cnh').value = doc.data().cnh;
+                      document.getElementById('cpf').value = doc.data().cpf;
+                      selecionarTexto('departamentos',doc.data().departamento);
+                      document.getElementById('email').value = doc.data().email;
+                      document.getElementById('matricula').value = doc.data().matricula;
+                      document.getElementById('rg').value = doc.data().rg;
+                      document.getElementById('vencimentoCNH').value = doc.data().vencimentoCNH;
+                      console.log(motoristaSelecionado);
+                    });
     };
 
 
@@ -97,19 +83,47 @@ const motoristasCadastrados = [];
       
     }
 
+    function atualizarMotorista(){
+      var select = document.getElementById('motoristas');
+      var value = select.options[select.selectedIndex].value;
+      console.log(value);
+      firebase.firestore().collection("motoristas").doc().update({
+
+      });
+
+    }
+
+    const categoriasCadastradas = [];
+
+      firebase.firestore().collection("categoriasmotorista")
+      .get()
+      .then(function(querySnapshot) {
+          querySnapshot.forEach(function(doc) {
+              // doc.data() is never undefined for query doc snapshots
+              categoriasCadastradas.push({value: doc.id, label: doc.data().catmotorista});
+          });
+      })
+      .catch(function(error) {
+          console.log("Error getting documents: ", error);
+      });
+      
 
 function Menu(){
   const [mostraCampos, setMostraCampos] = useState('txt');
+ 
     return (
-        
-      
         <body className="App-body">
         
           <img src={logo} className="App-logo" alt="logo" />
            
            <form>
-           <label className={mostraCampos}>Selecione um motorista para editar: </label>
-              <Select id="motoristas" name="Motoristas" className={mostraCampos}  options={motoristasCadastrados} onChange={handleChange}></Select>
+           <label className={mostraCampos} id="labelMotorista">Selecione um motorista para editar: </label>
+              <Select id="motoristas" name="Motoristas" className={mostraCampos}  options={motoristasCadastrados} 
+                  onChange={handleChange
+                    
+                  }>
+
+              </Select>
               <label className="txt"> Nome do Motorista: </label>
                 <input id="nomeMotorista" className="Name-form" type="text" placeholder="Nome Completo"/>
 
@@ -126,11 +140,13 @@ function Menu(){
                 <input className="Name-form" type="text" placeholder="Somente números" id="celular"/>
 
               <label className="txt"> Email: </label>
-                <input className="Name-form" type="text" placeholder="nome@email.com.br" id="email"/>
+              <input className="Name-form" type="email" placeholder="email@email.com" id="email"/>
 
               <label className="txt"> Escolha o Departamento: </label>
               <select id="departamentos" name="Departamentos">
-                {departamentosCadastrados.map((departamento) => (
+              <option value="Selecione">Selecione</option>
+                {
+                departamentosCadastrados.map((departamento) => (
                 <option value={departamento.id}>{departamento.label}</option>
                 ))}
               </select>
@@ -154,8 +170,9 @@ function Menu(){
 
              <label className="txt"> Categoria de Motorista: </label>
              <select id="catMotoristas" name="Categoria Motoristas">
-              <option value="Selecione">Selecione</option>
-                {categoriasCadastradas.map((categoria) => (
+             <option value="Selecione">Selecione</option>
+                {
+                  categoriasCadastradas.map((categoria) => (
                 <option value={categoria.id}>{categoria.label}</option>
                 ))}
               </select>
@@ -180,28 +197,30 @@ function Menu(){
               className="Button-login" 
               value="Salvar" 
               onClick={function handlerCadastrar(){
-                console.log('[mostraCampos] = ',{mostraCampos});
-                if({mostraCampos} == "hidden"){
-                  alert("Atualizar!");
+                console.log('[mostraCamposAqui] = ',{mostraCampos});
+                var teste = document.getElementById("labelMotorista").className
+                if(teste === "hidden"){
+                  alert("Novo");
+                  firebase.firestore().collection("motoristas").add({
+                    nome: document.getElementById('nomeMotorista').value,
+                    categoriaCNH: document.getElementById('CategoriaCNH').value,
+                    catMotorista: document.getElementById('catMotoristas').value,
+                    celular: document.getElementById('celular').value,
+                    cnh: document.getElementById('cnh').value,
+                    cpf: document.getElementById('cpf').value,
+                    departamento: document.getElementById('departamentos').value,
+                    email: document.getElementById('email').value,
+                    matricula: document.getElementById('matricula').value,
+                    rg: document.getElementById('rg').value,
+                    vencimentoCNH: document.getElementById('vencimentoCNH').value
+                  }
+                  )
+                  alert("Motorista cadastrado com Sucesso!");
                 }
                 else {
-                  alert("Novo!");
+                  atualizarMotorista();
+                  alert("Motorista Editado com Sucesso!");
                 }
-          
-                firebase.firestore().collection("motoristas").add({
-                  nome: document.getElementById('nomeMotorista').value,
-                  categoriaCNH: document.getElementById('CategoriaCNH').value,
-                  catMotorista: document.getElementById('catMotoristas').value,
-                  celular: document.getElementById('celular').value,
-                  cnh: document.getElementById('cnh').value,
-                  cpf: document.getElementById('cpf').value,
-                  departamento: document.getElementById('departamentos').value,
-                  email: document.getElementById('email').value,
-                  matricula: document.getElementById('matricula').value,
-                  rg: document.getElementById('rg').value,
-                  vencimentoCNH: document.getElementById('vencimentoCNH').value
-                }
-                )
               }
             
             }>

@@ -23,6 +23,7 @@ export const tela_login = withRouter(({history}) => {
         history.push('/principal'); 
       }catch(error){
         console.log(error);
+        alert("Email Errado.");
       }
     },
     [history],

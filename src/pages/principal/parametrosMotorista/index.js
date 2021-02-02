@@ -34,9 +34,11 @@ const categoriasCadastradas = [];
     function limparCampos(){
       document.getElementById('catmotorista').value = '';
       document.getElementById('valorhora').value = '';
+      document.getElementById('valorcafe').value = '';
+      document.getElementById('valoralmoco').value = '';
       document.getElementById('valorlanche').value = '';
       document.getElementById('valorpernoite').value = '';
-      document.getElementById('valorrefeicao').value = '';
+      document.getElementById('valorjanta').value = '';
     }
 
     const handleChange = selectedOption => {
@@ -45,9 +47,12 @@ const categoriasCadastradas = [];
 
         document.getElementById('catmotorista').value = doc.data().catmotorista;
         document.getElementById('valorhora').value = doc.data().valorhora;
+        document.getElementById('valorcafe').value = doc.data().valorcafe;
+        document.getElementById('valoralmoco').value = doc.data().valoralmoco;
         document.getElementById('valorlanche').value = doc.data().valorlanche;
         document.getElementById('valorpernoite').value = doc.data().valorpernoite;
-        document.getElementById('valorrefeicao').value = doc.data().valorrefeicao;
+        document.getElementById('valorjanta').value = doc.data().valorjanta;
+
         console.log(categoriaSelecionada);
       });
       
@@ -121,6 +126,7 @@ function Menu(){
                   valorjanta: document.getElementById('valorjanta').value,
                 }
                 )
+                alert("Categoria Motorista cadastrada com Sucesso!");
               }
             
             }>
@@ -131,7 +137,6 @@ function Menu(){
           <div className="Sair">
           <ButtonLink as="Link" className="ButtonLinkSAIR" href="/principal"><input className="Button-menu" type="submit" value="Voltar"/></ButtonLink>
           </div>
-
 
         </body>
   
