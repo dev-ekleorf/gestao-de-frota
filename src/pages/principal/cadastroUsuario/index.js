@@ -87,7 +87,7 @@ function CadastroUsuario(){
         <img src={logo} className="App-logo" alt="logo" />
          <form>
          <label className={mostraCampos}> Selecione um Usuário: </label>
-         <Select id="departamentos" name="depnome" className={mostraCampos}  options={usuariosCadastrados} onChange={handleChange}></Select>
+         <Select id="departamentos" name="depnome" className="select-form" placeholder="------------------ Selecione ------------------" options={usuariosCadastrados} onChange={handleChange}></Select><br />
 
          <label className="txt"> Nome do Usuário: </label>
             <input className="Name-form"type="text" name="name" placeholder="Nome Completo" id="usernome"/>
@@ -99,10 +99,10 @@ function CadastroUsuario(){
             <input className="Name-form"type="text" name="email" placeholder="nome@email.com.br" id="useremail"/>
             
             <label className="txt"> Selecione o Departamento: </label>
-            <Select id="depid" name="depnome" className="txt"  options={departamentosCadastrados}></Select>
+            <Select id="depid" name="depnome" className="select-form" placeholder="------------------ Selecione ------------------"  options={departamentosCadastrados}></Select><br />
 
             <label className="txt"> Selecione o Tipo de Usuário: </label>
-            <Select id="usertipo" name="tipousuario" className="txt" options={tiposUsuarios}></Select>
+            <Select id="usertipo" name="tipousuario" className="select-form" placeholder="------------------ Selecione ------------------" options={tiposUsuarios}></Select><br />
             
         </form>
 

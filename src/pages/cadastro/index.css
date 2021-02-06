@@ -10,13 +10,6 @@
   text-align: center;
 }
 
-.form-departamento {
-  background-Color:'white';
-  width: 308px;
-  height: 20px;
-  margin-top:10px;
-  text-align: center;
-}
 
 .formButtonCadastro {
   background-color: #05124e;
@@ -76,6 +69,17 @@ font-size: calc(1px + 2vmin);
   margin-top: 5px; 
 }
 
+.select-form1 {
+  background-Color:'white';
+  width: 308px;
+  height: 27px;
+  padding-top: 5px;
+  color:black;
+  font-size: 15px;
+  font-family: Arial;
+  text-align: left; 
+}
+
 .divSenha {
   color:antiquewhite;
   width: 300px;
@@ -95,4 +99,9 @@ font-size: calc(1px + 2vmin);
 .Sair {
   
   padding-left: 240px;
+}
+
+.teste {
+
+  
 }

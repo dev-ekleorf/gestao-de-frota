@@ -23,8 +23,8 @@ function Cadastro() {
           <label className="txt"> Email: </label>
             <input className="Name-form"type="text" name="email" placeholder="nome@email.com.br"/>
           <label className="txt"> Selecione o Departamento: </label>
-            <select className="form-departamento" name="departamento">
-              <option value="Selecione Departamento"> ---------------------- Departamento ----------------------</option>
+            <select className="select-form1" name="departamento">
+              <option value="Selecione Departamento"> ------------------ Departamento ----------------------</option>
               <option value="Departamento 1">Departamento 1</option>
               <option value="Departamento 2">Departamento 2</option>
               <option value="Departamento 3">Departamento 3</option>

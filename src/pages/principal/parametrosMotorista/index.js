@@ -70,7 +70,7 @@ function Menu(){
           <form>
           
           <label className={mostraCampos}> Selecione uma Categoria de Motorista: </label>
-          <Select id="CategoriaMotorista" name="CategoriaMotorista" className={mostraCampos}  options={categoriasCadastradas} onChange={handleChange}></Select>
+          <Select id="CategoriaMotorista" name="CategoriaMotorista" className="select-form" placeholder="------------------ Selecione ------------------" options={categoriasCadastradas} onChange={handleChange}></Select><br />
              
             <label className="txt">Nome categoria: </label>
               <input className="Name-form" type="text" placeholder="Digite a Categoria" id="catmotorista"/>

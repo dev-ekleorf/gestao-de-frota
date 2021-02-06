@@ -77,12 +77,12 @@ function Menu(){
 
           <form>
             <label className={mostraCampos}> Departamentos Cadastrados: </label>
-            <Select id="departamentos" name="depnome" className={mostraCampos}  options={departamentosCadastrados} onChange={handleChange}></Select>
+            <Select id="departamentos" name="depnome" className="select-form"  placeholder="------------------ Selecione ------------------"  options={departamentosCadastrados} onChange={handleChange}></Select><br />
             
            <label className="txt"> Nome do Departamento: </label>
               <input className="Name-form" type="text" placeholder="" id="depnome"/>
            <label className="txt"> Selecione o Campus: </label>
-             <Select id="lotacao" name="Lotação" className="txt"  options={campusCadastrados} ></Select>
+             <Select id="lotacao" name="Lotação" className="select-form"  placeholder="------------------ Selecione ------------------" options={campusCadastrados} ></Select><br />
           </form>
 
 

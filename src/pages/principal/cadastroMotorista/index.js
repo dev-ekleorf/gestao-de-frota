@@ -118,12 +118,12 @@ function Menu(){
            
            <form>
            <label className={mostraCampos} id="labelMotorista">Selecione um motorista para editar: </label>
-              <Select id="motoristas" name="Motoristas" className={mostraCampos}  options={motoristasCadastrados} 
+              <Select id="motoristas" name="Motoristas" className="select-form"  placeholder="------------------ Selecione ------------------" options={motoristasCadastrados} 
                   onChange={handleChange
                     
                   }>
 
-              </Select>
+              </Select><br />
               <label className="txt"> Nome do Motorista: </label>
                 <input id="nomeMotorista" className="Name-form" type="text" placeholder="Nome Completo"/>
 
@@ -143,8 +143,8 @@ function Menu(){
               <input className="Name-form" type="email" placeholder="email@email.com" id="email"/>
 
               <label className="txt"> Escolha o Departamento: </label>
-              <select id="departamentos" name="Departamentos">
-              <option value="Selecione">Selecione</option>
+              <select id="departamentos" className="select-form1" name="Departamentos">
+              <option value="Selecione">--------------------- Selecione -------------------------</option>
                 {
                 departamentosCadastrados.map((departamento) => (
                 <option value={departamento.id}>{departamento.label}</option>
@@ -158,8 +158,8 @@ function Menu(){
                  <input className="Name-form" type="date" placeholder="Vencimento da CNH" id="vencimentoCNH"/>
 
               <label className="txt"> Categoria da CNH: </label>
-              <select id="CategoriaCNH" name="CategoriaCNH">
-                <option value="Selecione">------------------------- Categoria  -------------------------</option>
+              <select id="CategoriaCNH" className="select-form1" name="CategoriaCNH">
+                <option value="Selecione">--------------------- Categoria  -------------------------</option>
                 <option value="A">A</option>   
                 <option value="B">B</option> 
                 <option value="AB">AB</option> 
@@ -169,8 +169,8 @@ function Menu(){
              </select><br />
 
              <label className="txt"> Categoria de Motorista: </label>
-             <select id="catMotoristas" name="Categoria Motoristas">
-             <option value="Selecione">Selecione</option>
+             <select id="catMotoristas" className="select-form1" name="Categoria Motoristas">
+             <option value="Selecione">---------------------  Selecione -------------------------</option>
                 {
                   categoriasCadastradas.map((categoria) => (
                 <option value={categoria.id}>{categoria.label}</option>
