@@ -81,7 +81,7 @@ function CadastroVeiculo(){
           <img src={logo} className="App-logo" alt="logo" />
           <form>
            <label className={mostraCampos}>Veículos Cadastrados: </label>
-             <Select id="veiculosCadastrados" name="veiculosCadastrados" className={mostraCampos} options={veiculosCadastrados} onChange={handleChange}></Select>
+             <Select id="veiculosCadastrados" name="veiculosCadastrados" className="select-form" placeholder="------------------ Selecione ------------------" options={veiculosCadastrados} onChange={handleChange}></Select><br />
          
            <label className="txt">Marca: </label>
               <input className="Name-form" type="text" placeholder="Exemplo: Fiat, Volkswagem, Renault etc" id="marca"/>
@@ -94,7 +94,7 @@ function CadastroVeiculo(){
            <label className="txt">Km do Veículo: </label>
               <input className="Name-form" type="text" placeholder="Exemplo: 20,000" id="kilometragem"/>
            <label className="txt">Selecione o tipo de Veículo: </label>
-             <Select id="tipoveiculo" name="tipoveiculo" className="txt" options={tiposVeiculos}></Select>
+             <Select id="tipoveiculo" name="tipoveiculo" className="select-form" placeholder="------------------ Selecione ------------------" options={tiposVeiculos}></Select><br />
           </form>
          
           <button

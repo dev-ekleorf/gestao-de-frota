@@ -74,6 +74,17 @@
 
 }
 
+.select-form {
+  background-Color:'white';
+  width: 308px;
+  height: 15px;
+  padding-top: 5px;
+  color:black;
+  font-size: 15px;
+  font-family: Arial;
+  text-align: left; 
+}
+
 .Save {
   
   padding-left: 1px;

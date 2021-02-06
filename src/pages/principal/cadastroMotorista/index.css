@@ -24,7 +24,30 @@
     width: 300px;
     height: 15px;
     padding-top: 5px;
-  
+    color:black;
+    
+  }
+
+  .select-form {
+    background-Color:'white';
+    width: 308px;
+    height: 15px;
+    padding-top: 5px;
+    color:black;
+    font-size: 15px;
+    font-family: Arial;
+    text-align: left; 
+  }
+
+  .select-form1 {
+    background-Color:'white';
+    width: 308px;
+    height: 27px;
+    padding-top: 5px;
+    color:black;
+    font-size: 15px;
+    font-family: Arial;
+    text-align: left; 
   }
 
  .txt {
